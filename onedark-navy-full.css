@@ -7,8 +7,11 @@
 --navy-bright: #7291ba;
 --white-navy: #e1e7ed;
 --navy-dark2: #303a48;
+--navy-torr-top: #2a3344;
 --navy-torr1: #273248;
 --navy-torr2: #1e2638;
+--navy-alert: #721b00;
+--navy-alert-txt: #fff;
 
 /* Stati UI */
 --hover-bg: #313a4a;
@@ -28,8 +31,8 @@
     0 1px 8px 0 rgba(34,44,58,0.12), 0 3px 3px -2px rgba(34,44,58,0.4);
 --achievement-progress-bg: var(--navy-accent);
 
---alert-bg: var(--navy-dark);
---alert-fg: #8794a1;
+--alert-bg: var(--navy-alert);
+--alert-fg: var(--navy-alert-txt);
 --alert-gap-color: var(--navy-mid);
 --alert-gap-width: 1px;
 
@@ -103,7 +106,7 @@
 
 --data-table-border-radius: 22px;
 --data-table-fg: #d5e1ea;
---data-table-th-bg: var(--navy-accent);
+--data-table-th-bg: var(--navy-torr-top);
 --data-table-thead-border: 1px solid var(--navy-mid);
 --data-table-tr-border: 1px solid var(--navy-mid);
 --data-table-tr-even-bg: var(--navy-torr1);
