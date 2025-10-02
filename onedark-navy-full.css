@@ -6,6 +6,9 @@
 --navy-accent: #506080;
 --navy-bright: #7291ba;
 --white-navy: #e1e7ed;
+--navy-dark2: #303a48;
+--navy-torr1: #273248;
+--navy-torr2: #1e2638;
 
 /* Stati UI */
 --hover-bg: #313a4a;
@@ -57,7 +60,7 @@
 --bbcode-rendered-quote-bg: #50608033;
 --bbcode-rendered-quote-border: var(--navy-bright);
 
---body-bg: var(--navy-dark);
+--body-bg: var(--navy-dark2);
 --body-fg: var(--white-navy);
 
 --breadcrumb-fg: var(--navy-bright);
@@ -103,9 +106,9 @@
 --data-table-th-bg: var(--navy-accent);
 --data-table-thead-border: 1px solid var(--navy-mid);
 --data-table-tr-border: 1px solid var(--navy-mid);
---data-table-tr-even-bg: var(--navy-accent);
+--data-table-tr-even-bg: var(--navy-torr1);
 --data-table-tr-hover-bg: var(--hover-bg);
---data-table-tr-odd-bg: var(--navy-accent);
+--data-table-tr-odd-bg: var(--navy-torr2);
 --data-table-tfoot-border: 3px solid var(--navy-mid);
 
 --dialog-bg: var(--navy-dark);
