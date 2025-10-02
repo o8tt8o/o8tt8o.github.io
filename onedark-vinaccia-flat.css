@@ -1,0 +1,160 @@
+:root {
+  --text-color: #d5c2e8;
+  --color-dark-magenta: #9a3d66;
+  --color-dark-green: #8e5572;
+  --color-dark-blue: #7d5ba6;
+  --color-dark-red: #b84a72;
+  --color-red: #b84a72;
+  --color-light-red: #d26a8e;
+  --color-green: #9a5d8b;
+  --color-light-green: #b678a4;
+  --color-yellow: #c97ca8;
+  --color-light-yellow: #e0a2c0;
+  --color-magenta: #9a3d66;
+  --color-light-magenta: #c97ca8;
+  --color-dark-purple: #7d5ba6;
+  --color-purple: #9c6bcf;
+  --color-light-purple: #b38ad9;
+  --color-blue: #8f7ae5;
+  --color-light-blue: #a997f0;
+  --color-bright-white: #ffffff;
+  --color-light-orange: #d48dbd;
+
+  /* flat sfondi vinaccia */
+  --bg-0: #2a1c2f;
+  --bg-1: #1c1220;
+  --bg-2: #17101b;
+  --bg-3: #110a14;
+  --bg-4: #0c0710;
+  --bg-5: #06040a;
+
+  --message-bubble-bg: #24142b;
+  --message-bubble-fg: currentColor;
+
+  /* effetto flat senza ombre pesanti */
+  --card-radius: 10px;
+  --card-bg: var(--bg-2);
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.4s ease;
+}
+
+/* RESET FLAT */
+* {
+  border-radius: 0;
+  box-shadow: none !important;
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-slow);
+}
+
+/* BODY */
+body {
+  background-color: var(--bg-1);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+}
+
+/* LINK */
+a {
+  color: var(--color-purple);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-light-purple);
+  transform: scale(1.03);
+}
+
+/* BUTTONS */
+button, .button, .btn {
+  background: var(--color-purple);
+  border: none;
+  color: white;
+  border-radius: var(--card-radius);
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+}
+button:hover, .button:hover, .btn:hover {
+  background: var(--color-light-purple);
+  transform: scale(1.05);
+}
+
+/* CARDS / PANELS */
+.panel, .card, .article-card, .torrent-card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 1rem;
+  transition: transform var(--transition-slow), background-color var(--transition-slow);
+}
+.panel:hover, .card:hover, .article-card:hover, .torrent-card:hover {
+  background: var(--bg-0);
+  transform: translateY(-4px);
+}
+
+/* TOP NAV */
+.top-nav, .secondary-nav {
+  background-color: var(--bg-2);
+  border-radius: 0 0 var(--card-radius) var(--card-radius);
+  padding: 0.8rem 1.2rem;
+}
+.top-nav__main-menus>li {
+  background: var(--bg-3);
+  border-radius: var(--card-radius);
+  padding: 0.4rem 0.8rem;
+  transition: background-color var(--transition-fast);
+}
+.top-nav__main-menus>li:hover {
+  background: var(--color-purple);
+}
+
+/* BADGE */
+.badge-user {
+  background-color: var(--color-dark-purple);
+  color: var(--color-bright-white);
+  border-radius: var(--card-radius);
+  padding: 0.3rem 0.8rem;
+  transition: transform var(--transition-fast);
+}
+.badge-user:hover {
+  transform: scale(1.1);
+}
+
+/* MESSAGE BUBBLES */
+.sent>h4, .sent>div {
+  background-color: var(--message-bubble-bg) !important;
+  border-radius: var(--card-radius);
+  padding: 0.5rem 1rem;
+  animation: fadeInUp 0.5s ease;
+}
+
+/* CHAT FRAME */
+#frame {
+  background: var(--bg-1);
+  border-radius: var(--card-radius);
+}
+#frame .content .messages ul li {
+  border-bottom: 1px solid var(--bg-3);
+}
+#frame .content .message-input .wrap button {
+  background: var(--color-purple);
+}
+#frame .content .message-input .wrap button:hover {
+  background: var(--color-light-purple);
+}
+
+/* TEXT HELPERS */
+.text-success { color: var(--color-light-green); }
+.text-warning { color: var(--color-light-yellow); }
+.text-danger  { color: var(--color-red); }
+
+/* FOOTER ICON */
+.footer__icon {
+  color: var(--color-light-purple);
+  transition: transform var(--transition-fast);
+}
+.footer__icon:hover {
+  transform: rotate(15deg);
+}
+
+/* ANIMAZIONI KEYFRAMES */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
