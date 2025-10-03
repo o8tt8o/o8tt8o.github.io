@@ -31,7 +31,7 @@
 --achievement-progress-bg: var(--terminal-gray-light);
 
 --alert-bg: var(--terminal-alert);
---alert-fg: var(--alert-txt);
+--alert-fg: var(--terminal-alert-txt);
 --alert-gap-color: var(--terminal-gray-mid);
 --alert-gap-width: 1px;
 
