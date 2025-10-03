@@ -10,6 +10,7 @@
 --terminal-white: #d2ffd2;
 --terminal-alert: #0f0;
 --terminal-alert-txt: #141414;
+--terminal-cyano: #3cf5e6;
 
 /* Stati UI */
 --hover-bg: #222;                /* sfondo hover: grigio scuro */
@@ -357,7 +358,7 @@
 --torrent-card-border: 1px solid var(--terminal-green);
 --torrent-card-head-bg: var(--terminal-gray-dark);
 --torrent-card-head-fg: var(--terminal-green-light);
---torrent-card-link-fg: var(--terminal-green-light);
+--torrent-card-link-fg: var(--terminal-cyano);
 --torrent-card-genre-fg: var(--terminal-green);
 
 --torrent-group-bg: var(--terminal-gray-dark);
@@ -407,7 +408,6 @@ font-size: 19px;
 font-weight: bold;
 padding: 12px 15px;
 color: var(--terminal-green);
-border-bottom: 2px solid var(--terminal-green);
 }
 
 .data-table > thead:not(:has(+ tbody > tr)):not(:has(~ tfoot > tr)) > tr:last-of-type > th {
@@ -438,7 +438,7 @@ color: var(--terminal-green);
 }
 a {
 color: var(--terminal-green-light);
-text-decoration: underline;
+text-decoration: none;
 }
 
 .chatroom__whispers {
@@ -446,7 +446,7 @@ border-top: 1px solid var(--terminal-green);
 }
 .chatbox-message {
 border-radius: 26px;
-padding: 0 4px;
+padding: 3px;
 color: var(--terminal-green);
 background: var(--terminal-black);
 border: 1px solid var(--terminal-green);
@@ -558,4 +558,46 @@ line-height: 36px;
 background: var(--terminal-gray-dark);
 color: var(--terminal-green);
 border: 1px solid var(--terminal-green);
+}
+
+.bbcode-rendered.bbcode-rendered a {
+    background-color: transparent;
+    color: #a490ee;
+    text-decoration: none;
+}
+.topic-listing__heading a {
+	color: var(--terminal-cyano);
+    font-weight: bold;
+	
+}
+.post__header {
+    grid-area: header;
+    display: grid
+;
+    grid-template-areas: "datetime topic . tip-stats toolbar";
+    grid-template-columns: auto auto 1fr auto auto;
+    align-items: center;
+    gap: 9px;
+    font-size: 13px;
+    color: var(--post-head-fg);
+    padding-left: 9px;
+    border-bottom: 1px solid;
+}
+
+.post__topic a {
+    color: var(--terminal-cyano);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.post__aside {
+    grid-area: aside;
+    padding: 9px;
+    display: flex
+;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--post-aside-bg);
+    color: var(--post-aside-fg);
+    border-right: 1px solid;
 }
